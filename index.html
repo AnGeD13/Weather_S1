@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="shortcut icon" href="public/icon/few-clouds.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo">
+      </a>
+      <form action="" method="get" class="header__search">
+        <input
+          class="header__input"
+          type="text"
+          placeholder="Поиск по городу"
+        />
+        <button class="header__button" disabled></button>
+      </form>
+    </header>
+    <main>
+      <div class="wrapper">
+          <section class="info">
+            <article class="info__weather">
+              <p class="info__city">Москва</p>
+              <p class="info__date">Суббота, <time datetime="01-06">06 января</time></p>
+              <time class="info__time" datetime="11:29">11:29</time>
+            </article>
+            <article class="info__temperature">-7&#176;</article>
+            <article class="info__state">
+              <p class="info__sky">
+                <span class="info__icon">
+                </span>
+                Облачно
+              </p>
+              <p class="info__exrect">Ощущается как -11&#176;</p>
+            </article>
+          </section>
+          <ul class="cards">
+            <li class="cards__item">
+              <h3 class="cards__title">Влажность</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/humidity.svg" 
+                width="32" height="32" alt="">
+              <p class="cards__value">
+                <span class="js-humidityValue"></span>&#37;
+              </p>
+              <div class="cards__bar">
+                <div id="humidity-range" class="cards__range"></div>
+                <span class="progress-circle"></span>
+                <p class="cards__bar-percents">
+                  <span>0&#37;</span> <span>100&#37;</span>
+                </p>
+              </div>
+            </li>
+            <li class="cards__item">
+              <h3 class="cards__title">Давление</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/barometr.svg" 
+                width="32" height="32" alt="">
+              <p class="cards__value js-pressureValue"></p>
+              <div class="cards__bar">
+                <div id="pressure-range" class="cards__range"></div>
+                <span class="progress-circle"></span>
+                <p class="cards__bar-detail js-pressureBarDetail"></p>
+              </div>
+            </li>
+            <li class="cards__item">
+              <h3 class="cards__title">Видимость</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/visibility.svg" 
+                width="32" height="32" alt="">
+              <p class="cards__value">
+                <span class="js-visibilityValue"></span> км
+              </p>
+              <div class="cards__bar">
+                <div id="visibility-range" class="cards__range"></div>
+                <span class="progress-circle"></span>
+                <p class="cards__bar-detail js-visibilityBarDetail"></p>
+              </div>
+            </li>
+            <li class="cards__item">
+              <h3 class="cards__title">Рассвет</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/sunrise.svg" 
+                width="32" height="32" alt="">
+              <time class="cards__value js-sunriseValue"></time>
+              <p class="cards__time">
+                Прошло: <time class="cards__sunrise-time js-sunriseTime"></time>
+              </p>
+            </li>
+            <li class="cards__item">
+              <h3 class="cards__title">Закат</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/sunset.svg" 
+                width="32" height="32" alt="">
+              <time class="cards__value js-sunsetValue"></time>
+              <p class="cards__time">
+                Осталось: <time class="cards__sunset-time js-sunsetTime"></time>
+              </p>
+            </li>
+            <li class="cards__item">
+              <h3 class="cards__title">Сила ветра</h3>
+              <img 
+                class="cards__img"
+                src="public/icon/card/wind-direction.svg" 
+                width="32" height="32" alt="">
+              <p class="cards__value">
+                <span class="js-windValue"></span> м/с
+              </p>
+              <p class="cards__wind js-windDirection"></p>
+            </li>
+          </ul>
+      </div>
+      <section class="slider">
+        <header class="slider__header">
+          <h2 class="slider__header-title">Прогноз: </h2>
+          <button 
+            class="slider__header-button 
+                  slider__header-button_active 
+                  js-slider-button-hours"
+          >
+            на 24 часа
+          </button>
+          <button class="slider__header-button js-slider-button-days"
+          >
+            на 5 дней
+          </button>
+        </header>
+        <section class="slider__switch">
+          <button class="slider__chevron slider__chevron_back" disabled>
+            <img src="public/icon/chevron.svg" alt="" width="24" height="24">
+          </button>
+          <ul class="slider__scroll"></ul>
+          <button class="slider__chevron slider__chevron_forward">
+            <img src="public/icon/chevron.svg" alt="" width="24" height="24">
+          </button>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      Проект выполнен в рамках стажировки <a href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
+    </footer>
+
+    <script type="module" src="scripts/switchSlider.js"></script>
+    <script type="module" src="scripts/setCardsData.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

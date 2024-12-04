@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84px;
+  color: rgba(var(--color-light));
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer a {
+  color: rgba(var(--color-light));
+  line-height: 18px;
+  margin-left: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--color-light));
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    height: 68px;
+  }
+}
+
+@media (max-width: 767px) { 
+  .footer {
+    height: 48px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

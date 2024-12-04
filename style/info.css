@@ -1,0 +1,117 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  width: 534px;
+  color: rgba(var(--color-light));
+  text-align: center;
+  padding: 8px 0;
+}
+
+.info__weather {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.info__weather,
+.info__state {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.info__city {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.info__temperature {
+  font-weight: 700;
+  font-size: 112px;
+  line-height: 112px;
+}
+
+.info__sky {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.info__icon {
+  background-image: url("../public/icon/broken-clouds.svg");
+  height: 24px;
+  width: 24px;
+}
+
+@media (max-width: 1279px) {
+  .info {
+    row-gap: 48px;
+    width: 374px;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .info {
+    row-gap: 24px;
+    width: 790px;
+    padding: 0;
+  }
+  
+  .info__weather {
+    row-gap: 6px;
+  }
+  
+  .info__sky {
+    column-gap: 6px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 885px) {  
+  .info {
+    width: 672px;
+  }
+}
+
+@media (max-width: 767px) { 
+  .info {
+    width: 576px;
+    row-gap: 16px;
+  }
+
+  .info__weather,
+  .info__state {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .info__city {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .info__temperature {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .info__weather {
+    row-gap: 4px;
+  }
+
+  .info__sky {
+    column-gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .info__icon {
+    height: 16px;
+    width: 16px;
+    background-image: url("../public/icon/broken-clouds-mobile.svg");
+  }
+}

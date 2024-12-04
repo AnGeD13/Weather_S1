@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "raleway";
+  src: local("raleway regular"), url("../fonts/raleway-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "raleway";
+  src: local("raleway bold"), url("../fonts/raleway-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+:root {
+  --font-base: "raleway";
+  --color-light: 245, 244, 244;
+  --color-grey: 112, 112, 112;
+  --color-dark: 32, 32, 32; 
+  --color-card-dark: 57, 57, 57; 
+  --radius: 8px;
+  --padding: 32px;
+  --indent-card: 16px;
+  --opacity: 0.4;
+  --progress-range-color: 218, 218, 218;
+}
+
+html {
+  background-image: url("../public/image/main.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-width: 1280px;
+}
+
+body {
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
+  max-width: 1120px;
+  margin: 32px auto;
+  border-radius: var(--radius);
+  backdrop-filter: blur(25px);
+}
+
+input {
+  font-family: var(--font-base);
+  font-weight: 400;
+}
+
+.logo {
+  width: 192px;
+  height: 48px;
+  background-image: url("../public/image/logo.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: var(--padding);
+}
+
+
+@media (max-width: 1279px) {
+  html {
+    min-width: 100%;
+  }
+  
+  body {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1023px) {  
+  body {
+    max-width: 838px;
+  }
+  
+  .logo {
+    width: 54px;
+    background-image: url("../public/image/logo-tablet.svg");
+  }
+  
+  .wrapper {
+    padding: 24px;
+    row-gap: 48px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 885px) {   
+  body {
+    max-width: 720px;
+    margin-block: 24px;
+  }
+}
+
+@media (max-width: 767px) { 
+  body {
+    max-width: 608px;
+    margin-block: 16px;
+  }
+  
+  .logo {
+    width: 32px;
+    height: 32px;
+    background-image: url("../public/image/logo-mobile.svg");
+  }
+  
+  .wrapper {
+    padding: 16px;
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 639px) {
+  body {
+    max-width: 343px;
+  }
+}
+

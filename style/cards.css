@@ -1,0 +1,164 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 506px;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--indent-card);
+  width: 158px;
+  height: 196px;
+  border-radius: var(--radius);
+  background-color: rgba(var(--color-light),  var(--opacity));
+  padding: var(--indent-card);
+  color: rgba(var(--color-dark));
+}
+
+.cards__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cards__img {
+  opacity: 0.7;
+}
+
+.cards__value {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.cards__bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+}
+
+.cards__range {
+  width: 126px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: rgba(var(--progress-range-color), var(--opacity));
+}
+
+#pressure-range {
+  background-image: radial-gradient(circle, #54545466, #8A8A8A66 65%, rgba(var(--progress-range-color), 0.4) 95%, rgba(var(--progress-range-color)));
+}
+
+.cards__bar-percents {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__time,
+.cards__wind,
+.cards__bar-detail,
+.cards__bar-percents {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(var(--color-card-dark));
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 0%);
+  background-color: rgb(var(--color-light));
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+@media (max-width: 1023px) {
+  .cards {
+    gap: 12px;
+    width: 515px;
+  }
+  
+  .cards__item {
+    width: 163px;
+  }
+}
+
+@media (max-width: 885px) {
+  .cards__range {
+    width: 131px;
+  }
+
+}
+
+@media (max-width: 767px) { 
+  .cards {
+    gap: 8px;
+    width: 400px;
+  }
+
+  .cards__item {
+    width: 128px;
+    height: 148px;
+    padding: 12px;
+    row-gap: 12px;
+  }
+  
+  .cards__title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .cards__img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cards__value {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .cards__bar {
+    row-gap: 6px;
+  }
+  
+  .cards__time,
+  .cards__wind,
+  .cards__bar-detail,
+  .cards__bar-percents {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .cards__range {
+    width: 104px;
+    height: 6px;
+  }
+  
+  .progress-circle {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 639px) {
+  .cards {
+    width: 311px;
+  }
+
+  .cards__item {
+    text-align: center;
+    width: 98px;
+  }
+
+  .cards__range {
+    width: 75px;
+  }
+
+}
